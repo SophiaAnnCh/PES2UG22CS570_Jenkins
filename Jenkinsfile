@@ -4,30 +4,28 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    sh 'g++ main/hello.cpp -o main/hello'
-                }
+                echo 'Building the project...'
+                sh 'g++ your_file.cpp -o PES2UG22CS570-1'
             }
         }
-
+        
         stage('Test') {
             steps {
-                script {
-                    sh './main/hello'
-                }
+                echo 'Testing the project...'
+                sh './PES2UG22CS570-1'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deployment Stage: No actual deployment in this lab.'
+                echo 'Deploying the project...'
             }
         }
     }
 
     post {
         failure {
-            echo 'Pipeline failed!'
+            echo 'Pipeline failed'
         }
     }
 }
