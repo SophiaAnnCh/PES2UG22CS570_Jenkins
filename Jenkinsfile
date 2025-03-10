@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh 'g++ your_file.cpp -o PES2UG22CS570-1'
+                sh 'g++ hello_pes2ug22cs570.cpp -o PES2UG22CS570-1'
             }
         }
         
